@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>ABOUT</title>
+    <script src="/jquery-3.3.1.min.js">
+    </script>
+
+    <style type="text/css">
+        @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+        @keyframes textBlink {
+            0% {
+                opacity: 1;
+                left: 2px;
+            }
+
+            30% {
+                opacity: .7;
+            }
+
+            70% {
+                opacity: .8;
+                left: -2px;
+            }
+
+            71% {
+                opacity: .8;
+                left: 0px;
+            }
+
+            75% {
+                opacity: .8;
+                left: 1px;
+            }
+
+            100% {
+                opacity: 7;
+                left: 0px;
+            }
+        }
+
+        @keyframes shadowDown {
+            0% {
+                top: 0px;
+            }
+
+            10% {
+                top: 20px;
+            }
+
+            20% {
+                top: 30px;
+            }
+
+            40% {
+                top: 35px;
+            }
+
+            60% {
+                top: 50px;
+            }
+
+            70% {
+                top: 20px;
+            }
+
+            100% {
+                top: 10px;
+            }
+        }
+
+        @keyframes shadowTextUp {
+            0% {
+                top: 0px;
+            }
+
+            10% {
+                top: -20px;
+                opacity: .5;
+            }
+
+            20% {
+                top: -30px;
+                opacity: 1;
+            }
+
+            40% {
+                top: -35px;
+            }
+
+            60% {
+                top: -50px;
+                opacity: .5;
+            }
+
+            70% {
+                top: -20px;
+            }
+
+            100% {
+                top: -10px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes hurueru {
+            0% {
+                transform: translate(0px, 0px) rotateZ(0deg)
+            }
+
+            25% {
+                transform: translate(2px, 2px) rotateZ(1deg)
+            }
+
+            50% {
+                transform: translate(0px, 2px) rotateZ(0deg)
+            }
+
+            75% {
+                transform: translate(2px, 0px) rotateZ(-1deg)
+            }
+
+            100% {
+                transform: translate(0px, 0px) rotateZ(0deg)
+            }
+        }
+
+        @keyframes RightToLeft {
+            0% {
+                opacity: 0;
+                /* 透明 */
+                transform: translateX(50px);
+                /* X軸方向に50px */
+            }
+
+            100% {
+                opacity: 1;
+                /* 不透明 */
+                transform: translateX(0);
+            }
+        }
+
+        @font-face {
+            font-family: Phenomena-Black;
+            src: url(font/Phenomena-Black.otf);
+        }
+
+        @font-face {
+            font-family: Pheno;
+            src: url(font/Phenomena-Regular.otf);
+        }
+
+        @font-face {
+            font-family: Neues;
+            src: url(font/Neues_Bauen_Demo.ttf);
+        }
+
+        @font-face {
+            font-family: concentrate;
+            src: url(font/Concentrate-Regular.otf);
+        }
+
+        @font-face {
+            font-family: Aero;
+            src: url(font/AeroviasBrasilNF.ttf);
+        }
+
+
+
+        body {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            background-image: url(dleaf.jpg);
+            background-size: 3000px 2400px;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(45, 50, 50, 1);
+            z-index: 10;
+        }
+
+        #menu {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #menu li {
+            display: block;
+            float: left;
+            width: 20%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li:hover {
+            background: rgba(10, 80, 100, 1);
+            animation: hurueru .3s infinite;
+        }
+
+        #menu li a {
+            display: block;
+            padding: 12px 0px 10px;
+            background: rgba(45, 50, 50, 1);
+            text-align: center;
+            text-decoration: none;
+            font-family: Pheno;
+            color: rgba(195, 200, 200, 1);
+        }
+
+        #menu li a:hover {
+            color: darkgoldenrod;
+            text-decoration: none;
+            display: inline-block;
+            background: rgba(10, 80, 100, 1);
+        }
+
+        #toggle {
+            display: none;
+            font-family: Pheno;
+        }
+
+        .main {
+            display: block;
+            width: 800px;
+            height: 180px;
+            color: #eee;
+            font-size: 100px;
+            font-family: Phenomena-Black;
+            font-weight: bold;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main .text {
+            display: block;
+            width: inherit;
+            height: inherit;
+            color: #eee;
+            font-size: 100px;
+            font-family: Phenomena-Black;
+            font-weight: bold;
+            left: 2px;
+            top: 0px;
+            position: absolute;
+            overflow: hidden;
+            animation-name: textBlink;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .shadow {
+            position: absolute;
+            width: inherit;
+            height: 40px;
+            overflow: hidden;
+            animation-name: shadowDown;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        .shadow .viewport {
+            position: relative;
+            width: inherit;
+            height: 200px;
+        }
+
+        .shadow .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            animation-name: shadowTextUp;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #blank {
+            width: 100%;
+            height: 100px;
+        }
+
+        /*以下about専用*/
+        .box {
+            width: 90%;
+            height: auto;
+            margin: auto;
+            margin-bottom: 40px;
+            padding: 1vw;
+            background-color: rgba(184, 134, 11, 0.9);
+            font-family: 'Noto Sans JP', sans-serif;
+            color: rgba(10, 10, 30, 0.9);
+        }
+
+        #subtitle {
+            font-size: 30pt;
+            font-family: neues;
+        }
+
+        #textlist {
+            margin: auto;
+            font-size: 19pt;
+        }
+
+        table {
+            vertical-align: top;
+        }
+
+
+
+        th {
+            -moz-text-align-last: justify;
+            text-align-last: justify;
+            vertical-align: top;
+        }
+
+        td {
+            text-align: left;
+            width: 60vw;
+            vertical-align: top;
+            padding-bottom: 30px;
+            
+        }
+
+        /*以下about専用*/
+
+
+
+
+
+        /*メディアクエリ*/
+        @media only screen and (max-width: 480px) {
+            #menu {
+                display: none;
+            }
+
+            #menu li {
+                width: 100%;
+            }
+
+            #toggle {
+                display: block;
+                position: relative;
+                width: 100%;
+                background: #222;
+                font-family: pheno;
+            }
+
+            #toggle a {
+                display: block;
+                position: relative;
+                padding: 12px 0 10px;
+                border-bottom: 1px solid #444;
+                color: #fff;
+                text-align: center;
+                text-decoration: none;
+                font-family: pheno;
+            }
+
+            #toggle:before {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                width: 20px;
+                height: 20px;
+                margin-top: -10px;
+                background: #fff;
+            }
+
+            #toggle a:before,
+            #toggle a:after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                width: 20px;
+                height: 4px;
+                background: #222;
+            }
+
+            #toggle a:before {
+                margin-top: -6px;
+            }
+
+            #toggle a:after {
+                margin-top: 2px;
+            }
+
+            body {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                background-image: url(dleaftate.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: repeat;
+                margin: 0;
+            }
+
+            #blank {
+                width: 100%;
+                height: 90px;
+            }
+
+            .main {
+                display: block;
+                width: 90vw;
+                height: 120px;
+                color: #eee;
+                font-size: 14vw;
+                font-family: Phenomena-Black;
+                font-weight: bold;
+                margin: auto;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .main .text {
+                display: block;
+                width: inherit;
+                height: inherit;
+                color: #eee;
+                font-size: 14vw;
+                font-family: Phenomena-Black;
+                font-weight: bold;
+                left: 1px;
+                top: 0px;
+                position: absolute;
+                overflow: hidden;
+                animation-name: textBlink;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            .shadow {
+                position: absolute;
+                width: inherit;
+                height: 30px;
+                overflow: hidden;
+                animation-name: shadowDown;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            .shadow .viewport {
+                position: relative;
+                width: inherit;
+                height: 150px;
+            }
+
+            .shadow .text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                animation-name: shadowTextUp;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            .box {
+                width: 90%;
+                height: auto;
+            }
+
+            #subtitle {
+                font-size: 4vw;
+                font-family: neues;
+            }
+
+            #textlist {
+                margin: auto;
+                font-size: 3vw;
+            }
+            td{
+                padding-bottom: 30px;
+            }
+        }
+
+        @media only screen and (min-width: 481px) and (max-width: 900px) {
+            #menu li {
+                width: 20%;
+            }
+
+            body {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                background-image: url(dleaftate.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: repeat;
+                margin: 0;
+            }
+
+            .main {
+                display: block;
+                width: 90vw;
+                height: 180px;
+                color: #eee;
+                font-size: 14vw;
+                font-family: Phenomena-Black;
+                font-weight: bold;
+                margin: auto;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .main .text {
+                display: block;
+                width: inherit;
+                height: inherit;
+                color: #eee;
+                font-size: 14vw;
+                font-family: Phenomena-Black;
+                font-weight: bold;
+                left: 1px;
+                top: 0px;
+                position: absolute;
+                overflow: hidden;
+                animation-name: textBlink;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            .shadow {
+                position: absolute;
+                width: inherit;
+                height: 30px;
+                overflow: hidden;
+                animation-name: shadowDown;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            .shadow .viewport {
+                position: relative;
+                width: inherit;
+                height: 150px;
+            }
+
+            .shadow .text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                animation-name: shadowTextUp;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            .box {
+                width: 90%;
+                height: auto;
+            }
+
+            #subtitle {
+                font-size: 4vw;
+                font-family: neues;
+            }
+
+            #textlist {
+                margin: auto;
+                font-size: 3vw;
+            }
+
+        }
+
+        /*メディアクエリ終わり*/
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div id="menu-box">
+            <div id="toggle"><a href="#">MENU</a></div>
+            <ul id="menu" class="">
+                <li><a href="http://stonestaro.but.jp/portforio/top.html">HOME</a></li>
+                <li><a href="http://stonestaro.but.jp/portforio/about.html">ABOUT</a></li>
+                <li><a href="http://stonestaro.but.jp/portforio/elements.html">ELEMENTS</a></li>
+                <li><a href="http://stonestaro.but.jp/portforio/skill.html">SKILL</a></li>
+                <li><a href="http://stonestaro.but.jp/portforio/contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="blank">
+    </div>
+
+    <div class="main">
+        <div class="text">T A R O N A K A N O</div>
+        <div class="shadow">
+            <div class="viewport">
+                <div class="text">T A R O N A K A N O</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="box">
+        <h1 id="subtitle">A B O U T</h1>
+        <table id="textlist">
+            <tr>
+                <th>氏名：</th>
+                <td>中野太郎(ナカノタロウ)</td>
+            </tr>
+            <tr>
+                <th>生年月日：</th>
+                <td>１９９１/６/４</td>
+            </tr>
+            <tr>
+                <th>長所：</th>
+                <td>積極的な行動力、コスト意識</td>
+            </tr>
+            <tr>
+                <th>短所：</th>
+                <td>周りに頼らない（改善中）</td>
+            </tr>
+            <tr>
+                <th>趣味：</th>
+                <td>キャンプ、映画鑑賞、カメラ</td>
+            </tr>
+            <tr>
+                <th>特技：</th>
+                <td>野球、楽曲制作</td>
+            </tr>
+            <tr>
+                <th>転職理由：</th>
+                <td>より挑戦的でよりスピード感がある環境に身を置き、自分をトップスピードで成長させつつ働きたいと考えたから</td>
+            </tr>
+            <tr>
+                <th>学歴：</th>
+                <td>2010/03 和歌山県立星林高校卒業
+                <br>2014/03 同志社大学政策学部政策学科卒業
+                <br>2017/03 大阪大学大学院文学研究科首席卒業</td>    
+            </tr>
+            <tr>
+                <th>職歴：</th>
+                <td>2017/04 関西医科大学　研究課　入職</td>    
+            </tr>
+
+
+        </table>
+
+
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+        (function($) {
+            $('audio').prop('volume', 0.5);
+        })(jQuery);
+
+        $(document).ready(function() {
+            $('body').hide().fadeIn(4000);
+        });
+
+        $(function() {
+            $("#toggle").click(function() {
+                $("#menu").slideToggle();
+                return false;
+            });
+            $(window).resize(function() {
+                var win = $(window).width();
+                var p = 480;
+                if (win > p) {
+                    $("#menu").show();
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <audio preload="auto" autoplay loop>
+        <source src="http://stonestaro.but.jp/portforio/bgm.mp3">
+    </audio>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>万年筆でアルファベットを書くGIF動画</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="keywords" content="">
+<meta name="description" content="[元動画] https://www.youtube.com/watch?v=pRebkWHsHC0" >
+<meta name="copyright" content="GIFMAGAZINE">
+<meta name="author" content="GIFMAGAZINE">
+<meta name="format-detection" content="telephone=no">
+<meta property="fb:app_id" content="1045379895490324">
+<meta property="og:site_name"   content="GIFMAGAZINE">
+<meta property="og:title" content="万年筆でアルファベットを書くGIF動画">
+<meta property="og:description" content="[元動画] https://www.youtube.com/watch?v=pRebkWHsHC0">
+<meta property="og:url"          content="https://img.gifmagazine.net/gifmagazine/images/351734/original.gif">
+<meta property="og:type"         content="video.other">
+<meta property="og:image"        content="https://img.gifmagazine.net/gifmagazine/images/351734/original.gif">
+<meta property="og:image:type"   content="image/gif">
+<meta property="og:image:width"  content="420">
+<meta property="og:image:height" content="236">
+<meta property="og:video"        content="https://img.gifmagazine.net/gifmagazine/images/351734/original.mp4">
+<meta property="og:video:secure_url" content="https://img.gifmagazine.net/gifmagazine/images/351734/original.mp4">
+<meta property="og:video:type"   content="video/mp4">
+<meta property="og:video:width"  content="420">
+<meta property="og:video:height" content="236">
+
+<meta name="twitter:site"        content="@gifmagazine">
+<meta name="twitter:card"        content="summary">
+<meta name="twitter:title"       content="GIFMAGAZINE">
+<meta name="twitter:creator"     content="@gifmagazine">
+<meta name="twitter:description" content="[元動画] https://www.youtube.com/watch?v=pRebkWHsHC0">
+<meta name="twitter:image:src"   content="https://img.gifmagazine.net/gifmagazine/images/351734/medium_thumb.png">
+<meta name="twitter:domain"      content="gifmagazine.net">
+<link rel="shortcut icon" href="https://file.gifmagazine.net/gifmagazine/000assets/images/v2/favicon.png">
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="9qDImr/uNFyMmNi8u3BK8J77F4ilMj4FvS9gQILOb0SU+mW3o02h0NPLaE/UM05ODQ2pnaArQYZp0QcqMrB4cQ==" />
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: 0;
+  border: 0;
+  background-color: #000;
+}
+body {
+  height: 100%;
+  font-size: 14px;
+  letter-spacing: .01em;
+}
+#inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 10px;
+  margin-top: -15px;
+}
+#inner-box {
+  margin: 0 auto;
+  max-width: 100%;
+}
+#inner #main-img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+#inner .header {
+  margin-bottom: 10px;
+}
+#inner .header a {
+  overflow: hidden;
+  display: flex;
+  text-align: left;
+  text-decoration: none;
+}
+#inner .header img {
+  display: inline-block;
+  width: 100%;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+#inner .header .username {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#inner .header span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+#inner .footer {
+  margin-top: 10px;
+  height: 30px;
+}
+#inner .footer a {
+  width: 100%;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+}
+#inner .footer h1 {
+  display: inline-block;
+  line-height: 1.6;
+  color: #f64e7e;
+  font-weight: bold;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+</style>
+<!--GA-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-43980601-2', 'auto');
+  var eventTitle = 'path:' + location.pathname + (location.search.replace(/&commit.+/,'')) + " id:" + "351734" + ' ref:' + document.referrer;
+  ga('send', 'pageview');
+  ga('send','event','impression','view', eventTitle);
+</script>
+<!--GA-->
+<script>
+window.onload = function () {
+  var label = "post_images_351734";
+  var pLocation = window.location.pathname + (window.location.search.replace(/&commit.+/,''));
+  var link = '';
+  var gid = "351734";
+  var uid = "from-direct-access";
+  var oid = "27884";
+  var altReferrer = document.referrer;
+  var endpoint = 'https://log.gifmagazine.net/gm/ad/collect'
+  var params = "?category=organic&evtAction=imp&label=" + label + "&location=" + pLocation + "&link=&gid=" + gid + "&uid=" + uid + "&oid=" + oid + "&altReferrer=" + altReferrer;
+  var logUrl = endpoint + params;
+  new Image().src = logUrl;
+}
+</script>
+</head>
+<body>
+  <article id="inner">
+    <div id="inner-box">
+      <div class="header">
+        <a href="https://gifmagazine.net/users/27884/profile" target="_blank">
+          <img src="https://file.gifmagazine.net/gifmagazine/000assets/images/v2/anonymous_icon.png" />
+          <div class="username">
+            <span> via raphaelle2eos on GIFMAGAZINE</span>
+          </div>
+        </a>
+      </div>
+      <a href="https://gifmagazine.net/post_images/351734" target="_blank">
+          <video
+            id="main-img"
+            src="https://img.gifmagazine.net/gifmagazine/images/351734/original.mp4"
+            poster="https://img.gifmagazine.net/gifmagazine/images/351734/medium_thumb.png"
+            playsinline muted autoplay loop>
+          </video>
+      </a>
+      <div class="footer">
+        <a href="https://gifmagazine.net/post_images/351734" target="_blank">
+          <h1>万年筆でアルファベットを書くGIF動画</h1>
+        </a>
+      </div>
+    </div>
+  </article>
+</body>
+<script>
+var img = document.querySelector("#main-img");
+img.onloadstart = function() {
+  var h = img.height;
+  var headerH = 40;
+  var footerH = 40;
+  if (h < window.innerHeight - headerH - footerH) {
+    document.querySelector('#inner').style["height"] = window.innerHeight + 'px';
+  }
+}
+</script>
+</html>

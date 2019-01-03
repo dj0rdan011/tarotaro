@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>ABOUT</title>
+    <script src="/jquery-3.3.1.min.js">
+    </script>
+
+    <style type="text/css">
+        @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+        @keyframes textBlink {
+            0% {
+                opacity: 1;
+                left: 2px;
+            }
+
+            30% {
+                opacity: .7;
+            }
+
+            70% {
+                opacity: .8;
+                left: -2px;
+            }
+
+            71% {
+                opacity: .8;
+                left: 0px;
+            }
+
+            75% {
+                opacity: .8;
+                left: 1px;
+            }
+
+            100% {
+                opacity: 7;
+                left: 0px;
+            }
+        }
+
+        @keyframes shadowDown {
+            0% {
+                top: 0px;
+            }
+
+            10% {
+                top: 20px;
+            }
+
+            20% {
+                top: 30px;
+            }
+
+            40% {
+                top: 35px;
+            }
+
+            60% {
+                top: 50px;
+            }
+
+            70% {
+                top: 20px;
+            }
+
+            100% {
+                top: 10px;
+            }
+        }
+
+        @keyframes shadowTextUp {
+            0% {
+                top: 0px;
+            }
+
+            10% {
+                top: -20px;
+                opacity: .5;
+            }
+
+            20% {
+                top: -30px;
+                opacity: 1;
+            }
+
+            40% {
+                top: -35px;
+            }
+
+            60% {
+                top: -50px;
+                opacity: .5;
+            }
+
+            70% {
+                top: -20px;
+            }
+
+            100% {
+                top: -10px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes hurueru {
+            0% {
+                transform: translate(0px, 0px) rotateZ(0deg)
+            }
+
+            25% {
+                transform: translate(2px, 2px) rotateZ(1deg)
+            }
+
+            50% {
+                transform: translate(0px, 2px) rotateZ(0deg)
+            }
+
+            75% {
+                transform: translate(2px, 0px) rotateZ(-1deg)
+            }
+
+            100% {
+                transform: translate(0px, 0px) rotateZ(0deg)
+            }
+        }
+
+        @keyframes RightToLeft {
+            0% {
+                opacity: 0;
+                /* 透明 */
+                transform: translateX(50px);
+                /* X軸方向に50px */
+            }
+
+            100% {
+                opacity: 1;
+                /* 不透明 */
+                transform: translateX(0);
+            }
+        }
+
+        @font-face {
+            font-family: Phenomena-Black;
+            src: url(font/Phenomena-Black.otf);
+        }
+
+        @font-face {
+            font-family: Pheno;
+            src: url(font/Phenomena-Regular.otf);
+        }
+
+        @font-face {
+            font-family: Neues;
+            src: url(font/Neues_Bauen_Demo.ttf);
+        }
+
+        @font-face {
+            font-family: concentrate;
+            src: url(font/Concentrate-Regular.otf);
+        }
+
+        @font-face {
+            font-family: Aero;
+            src: url(font/AeroviasBrasilNF.ttf);
+        }
+
+
+
+        body {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            background-image: url(dleaf.jpg);
+            background-size: 3000px 2400px;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(45, 50, 50, 1);
+            z-index: 10;
+        }
+
+        #menu {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #menu li {
+            display: block;
+            float: left;
+            width: 20%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li:hover {
+            background: rgba(10, 80, 100, 1);
+            animation: hurueru .3s infinite;
+        }
+
+        #menu li a {
+            display: block;
+            padding: 12px 0px 10px;
+            background: rgba(45, 50, 50, 1);
+            text-align: center;
+            text-decoration: none;
+            font-family: Pheno;
+            color: rgba(195, 200, 200, 1);
+        }
+
+        #menu li a:hover {
+            color: darkgoldenrod;
+            text-decoration: none;
+            display: inline-block;
+            background: rgba(10, 80, 100, 1);
+        }
+
+        #toggle {
+            display: none;
+            font-family: Pheno;
+        }
+
+        .main {
+            display: block;
+            width: 800px;
+            height: 180px;
+            color: #eee;
+            font-size: 100px;
+            font-family: Phenomena-Black;
+            font-weight: bold;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main .text {
+            display: block;
+            width: inherit;
+            height: inherit;
+            color: #eee;
+            font-size: 100px;
+            font-family: Phenomena-Black;
+            font-weight: bold;
+            left: 2px;
+            top: 0px;
+            position: absolute;
+            overflow: hidden;
+            animation-name: textBlink;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .shadow {
+            position: absolute;
+            width: inherit;
+            height: 40px;
+            overflow: hidden;
+            animation-name: shadowDown;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        .shadow .viewport {
+            position: relative;
+            width: inherit;
+            height: 200px;
+        }
+
+        .shadow .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            animation-name: shadowTextUp;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #blank {
+            width: 100%;
+            height: 100px;
+        }
+
+        /*以下elements専用*/
+        .box {
+            width: 80%;
+            height: auto;
+            margin: auto;
+            margin-bottom: 40px;
+            padding: 1vw;
+            background-color: rgba(184, 134, 11, 0.9);
+            font-family: 'Noto Sans JP', sans-serif;
+            color: rgba(10, 10, 30, 0.9);
+        }
+
+        #subtitle {
+            font-size: 30pt;
+            font-family: neues;
+        }
+
+        #textlist {
+            margin: auto;
+            font-size: 15pt;
+        }
+
+        table {
+            vertical-align: top;
+        }
+
+        th {
+            -moz-text-align-last: justify;
+            text-align-last: justify;
+            vertical-align: top;
+        }
+
+        td {
+            text-align: left;
+            width: 60vw;
+            vertical-align: top;
+            padding-bottom: 30px;
+        }
+
+        /*以下elements専用*/
+
+
+
+
+
+        /*メディアクエリ*/
+        @media only screen and (max-width: 480px) {
+            #menu {
+                display: none;
+            }
+
+            #menu li {
+                width: 100%;
+            }
+
+            #toggle {
+                display: block;
+                position: relative;
+                width: 100%;
+                background: #222;
+                font-family: pheno;
+            }
+
+            #toggle a {
+                display: block;
+                position: relative;
+                padding: 12px 0 10px;
+                border-bottom: 1px solid #444;
+                color: #fff;
+                text-align: center;
+                text-decoration: none;
+                font-family: pheno;
+            }
+
+            #toggle:before {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                width: 20px;
+                height: 20px;
+                margin-top: -10px;
+                background: #fff;
+            }
+
+            #toggle a:before,
+            #toggle a:after {
+                display: block;
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                width: 20px;
+                height: 4px;
+                background: #222;
+            }
+
+            #toggle a:before {
+                margin-top: -6px;
+            }
+
+            #toggle a:after {
+                margin-top: 2px;
+            }
+
+            body {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                background-image: url(dleaftate.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: repeat;
+                margin: 0;
+            }
+
+            #blank {
+                width: 100%;
+                height: 90px;
+            }
+
+            .main {
+                display: block;
+                width: 90vw;
+                height: 120px;
+                color: #eee;
+                font-size: 14vw;
+                font-family: Phenomena-Black;
+                font-weight: bold;
+                margin: auto;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .main .text {
+                display: block;
+                width: inherit;
+                height: inherit;
+                color: #eee;
+                font-size: 14vw;
+                font-family: Phenomena-Black;
+                font-weight: bold;
+                left: 1px;
+                top: 0px;
+                position: absolute;
+                overflow: hidden;
+                animation-name: textBlink;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            .shadow {
+                position: absolute;
+                width: inherit;
+                height: 30px;
+                overflow: hidden;
+                animation-name: shadowDown;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            .shadow .viewport {
+                position: relative;
+                width: inherit;
+                height: 150px;
+            }
+
+            .shadow .text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                animation-name: shadowTextUp;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            .box {
+                width: 90%;
+                height: auto;
+            }
+
+            #subtitle {
+                font-size: 4vw;
+                font-family: neues;
+            }
+
+            #textlist {
+                margin: auto;
+                font-size: 3vw;
+            }
+        }
+
+        @media only screen and (min-width: 481px) and (max-width: 900px) {
+            #menu li {
+                width: 20%;
+            }
+
+            body {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                background-image: url(dleaftate.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: repeat;
+                margin: 0;
+            }
+
+            .main {
+                display: block;
+                width: 90vw;
+                height: 180px;
+                color: #eee;
+                font-size: 14vw;
+                font-family: Phenomena-Black;
+                font-weight: bold;
+                margin: auto;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .main .text {
+                display: block;
+                width: inherit;
+                height: inherit;
+                color: #eee;
+                font-size: 14vw;
+                font-family: Phenomena-Black;
+                font-weight: bold;
+                left: 1px;
+                top: 0px;
+                position: absolute;
+                overflow: hidden;
+                animation-name: textBlink;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            .shadow {
+                position: absolute;
+                width: inherit;
+                height: 30px;
+                overflow: hidden;
+                animation-name: shadowDown;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            .shadow .viewport {
+                position: relative;
+                width: inherit;
+                height: 150px;
+            }
+
+            .shadow .text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                animation-name: shadowTextUp;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            .box {
+                width: 90%;
+                height: auto;
+            }
+
+            #subtitle {
+                font-size: 4vw;
+                font-family: neues;
+            }
+
+            #textlist {
+                margin: auto;
+                font-size: 3vw;
+            }
+
+        }
+
+        /*メディアクエリ終わり*/
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div id="menu-box">
+            <div id="toggle"><a href="#">MENU</a></div>
+            <ul id="menu" class="">
+                <li><a href="http://stonestaro.but.jp/portforio/top.html">HOME</a></li>
+                <li><a href="http://stonestaro.but.jp/portforio/about.html">ABOUT</a></li>
+                <li><a href="http://stonestaro.but.jp/portforio/elements.html">ELEMENTS</a></li>
+                <li><a href="http://stonestaro.but.jp/portforio/skill.html">SKILL</a></li>
+                <li><a href="http://stonestaro.but.jp/portforio/contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="blank">
+    </div>
+
+    <div class="main">
+        <div class="text">T A R O N A K A N O</div>
+        <div class="shadow">
+            <div class="viewport">
+                <div class="text">T A R O N A K A N O</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="box">
+        <h1 id="subtitle">E L E M E N T S</h1>
+        <table id="textlist">
+            <tr>
+                <th>レーベル運営：</th>
+                <td>「クリエイターファースト」をテーマに、2017年11月より始めた音楽レーベル運営。国内外のアーティストを発掘し、電子メール等でコンタクトをとり、リリースする楽曲のコンセプトやプロモーション戦略を決定する。そこから戦略に沿ったメインビジュアルやSNSに向けたプロモーション動画を自ら制作（またはディレクション）する。最終的に全世界に楽曲のディストリビューション（Spotify等）を行う。黒字運営ではあるが、経費を差し引いた利益に関しては、ほぼ全額をクリエイターにペイバックし、シーンの活性化に寄与している。この活動の中でブランディングやプロモーションに興味を持ち、仕事として挑戦してみたい、と強く考えるようになった。</td>
+            </tr>
+            <tr>
+                <th>大学職員：</th>
+                <td>大学院を修了したのち、2017年4月より関西医科大学に事務職員として入職。研究支援部署にて、主に研究費獲得のための戦略提案業務を任されている。具体的には社会のニーズ/シーズに沿った研究コンセプトを研究者と共に考える。この業務をきっかけにブランディングという概念を意識し始めた。立場の違う相手と共に、相手のクリエイティビティを可能な限り損なうことなく、最大利益が得られるような戦略を組む。その難しさに悩むこともあるが、同時にその面白さを知り、ディレクションに興味を抱いた。</td>
+            </tr>
+            <tr>
+                <th>野球：</th>
+                <td>小学校3年生から高校3年まで取り組み続けた野球。中学時代はキャプテンを、高校時代は副キャプテンを務めた。極限状況下での緊張のコントロールやチームコントロールを学び、忍耐力が身に付いた。</td>
+            </tr>
+            <tr>
+                <th>音楽制作：</th>
+                <td>中学3年生の時にギターを初めて以来、現在に到るまで13年続けてきた音楽制作。現在では自作の楽曲が海外（ロンドン、ローマ等）のレーベルから全世界に向けて楽曲が販売されている。継続は着実に実を結ぶということを学び、トレンドに対する嗅覚と理解力/分析力が身に付いた。</td>
+            </tr>
+
+        </table>
+
+
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+        (function($) {
+            $('audio').prop('volume', 0.5);
+        })(jQuery);
+
+        $(document).ready(function() {
+            $('body').hide().fadeIn(4000);
+        });
+
+        $(function() {
+            $("#toggle").click(function() {
+                $("#menu").slideToggle();
+                return false;
+            });
+            $(window).resize(function() {
+                var win = $(window).width();
+                var p = 480;
+                if (win > p) {
+                    $("#menu").show();
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <audio preload="auto" autoplay loop>
+        <source src="bgm.mp3">
+    </audio>
+</body>
+
+</html>
